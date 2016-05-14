@@ -51,7 +51,6 @@ class BaseCommand(sublime_plugin.WindowCommand):
         return flags[self.task_name] if self.task_name in flags else ""
 
     def executeCommand( self, cmd ):
-        # self.settings.binary = "/usr/local/bin/box"
         try:
             self.settings.binary
         except AttributeError:
@@ -62,20 +61,14 @@ class BaseCommand(sublime_plugin.WindowCommand):
                 self.appendToMainThreadOutput( "A CommandBox binary could not be found to run.  Please set the binary path in your user settings or install CommandBox first." )
                 return False
 
-        self.appendToMainThreadOutput( "Binary: " + self.settings.binary + "\n" )
-        self.appendToMainThreadOutput( "Commandbox is ready:" + str(self.isCommandboxReady()) + "\n" )
+        print( "Binary: " + self.settings.binary + "\n" )
+        print( "Commandbox is ready:" + str(self.isCommandboxReady()) + "\n" )
 
         # if not self.isCommandboxReady():
-        #   self.process.run()
-
-        if cmd:
-            self.appendToMainThreadOutput( "Running binary command: " + self.settings.binary + " " + cmd + "\n" )
-            
-            binaryCmd = self.settings.binary + " " + cmd
-            self.process.run( binaryCmd )
-            stdout, stderr = self.process.communicate(self.appendToMainThreadOutput)
-        else:
-            print("No executable command provided.\n\n")
+        self.show_output_panel("Running binary command: " + self.settings.binary + " " + cmd + "\n")
+        binaryCmd = self.settings.binary + " " + cmd
+        self.process.run( binaryCmd )
+        stdout, stderr = self.process.communicate(self.appendToMainThreadOutput)
 
     def findBinaryPath( self, binaryName ):
         # If we have a commandbox installation in our project root:
