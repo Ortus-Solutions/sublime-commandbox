@@ -1,0 +1,174 @@
+[
+    {
+        "id": "view",
+        "children":
+        [
+            {
+                "caption": "Commandbox",
+                "children": [
+                    { "caption": "Show Commandbox Panel","command": "commandbox", "args": {"task_name":"default_show_panel"} },
+                    { "caption": "Hide Commandbox Panel","command": "commandbox", "args": {"task_name":"default_close_panel"}  }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "tools",
+        "children":
+        [
+            {
+                "caption": "-",
+                "caption": "Commandbox",
+                "children": [
+                    { "caption": "Run Commandbox Command", "command": "commandbox", "args": {"task_name":"arbitrary_input"} },
+                    { "caption": "List Namespaces","command": "commandbox", "args": {"task_name":"help_run"} },
+                    { "caption": "-" },
+                    {
+                        "caption":"Server",
+                        "children":[ 
+                            { "caption": "Start", "command": "commandbox", "args": {"task_name":"server_start"} },
+                            { "caption": "Stop", "command": "commandbox", "args": {"task_name":"server_stop"} },
+                            {"caption": "-"},
+                            { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_server"} }
+                        ]
+                    },
+
+                    {
+                        "caption": "Create",
+                        "children": [ 
+                            { "caption": "App", "command": "commandbox", "args": {"task_name":"create_app"} },
+                            { "caption": "Model", "command": "commandbox", "args": {"task_name":"create_model"} },
+                            { "caption": "Controller", "command": "commandbox", "args": {"task_name":"create_controller"} },
+                            { "caption": "View", "command": "commandbox", "args": {"task_name":"create_view"} },
+                            { "caption": "Interceptor", "command": "commandbox", "args": {"task_name":"create_interceptor"} },
+                            { "caption": "Layout", "command": "commandbox", "args": {"task_name":"create_layout"} },
+                            { "caption": "ORM Entity", "command": "commandbox", "args": {"task_name":"create_entity"} },
+                            { "caption": "ORM Service", "command": "commandbox", "args": {"task_name":"create_service"} },
+                            { "caption": "BDD Test", "command": "commandbox", "args": {"task_name":"create_bdd"} },
+                            { "caption": "MXUnit Test", "command": "commandbox", "args": {"task_name":"create_unit"} },
+                            {"caption": "-"},
+                            { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_create"} }
+                        ]
+                    },
+
+                    {
+                        "caption":"TestBox",
+                        "children":[ 
+                            { "caption": "Run", "command": "commandbox", "args": {"task_name":"testbox_run"} },
+                            { "caption": "Run URL", "command": "commandbox", "args": {"task_name":"testbox_runnerInput"} },
+                            {"caption": "-"},
+                            { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_testbox"} }
+                        ]
+                    },
+                    {
+                        "caption":"Config",
+                        "children":[ 
+                            { "caption": "Set", "command": "commandbox", "args": {"task_name":"config_inputSet"} },
+                            { "caption": "Get", "command": "commandbox", "args": {"task_name":"config_inputGet"} }
+                        ]
+                    },
+                    { "caption": "-" },
+                    {
+                        "caption":"Forgebox",
+                        "children":[ 
+                            { "caption": "Login", "command": "commandbox", "args": {"task_name":"forgebox_inputLogin"} },
+                            { "caption": "Search Packages", "command": "commandbox", "args": {"task_name":"forgebox_inputSearch"} },
+                            { "caption": "Publish", "command": "commandbox", "args": {"task_name":"forgebox_publish"} }
+                        ]
+                    }
+                   
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Commandbox",
+                        "children":
+                        [
+                            // Settings
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/Commandbox/Commandbox.sublime-settings"},
+                                "caption": "Settings – Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/Commandbox.sublime-settings"},
+                                "caption": "Settings – User"
+                            },
+                            { "caption": "-" },
+                            // Keybindings - Default
+                            {
+                                "caption": "Key Bindings – Default",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/Commandbox/Default (OSX).sublime-keymap",
+                                    "platform": "OSX"
+                                }
+                            },
+                            {
+                                "caption": "Key Bindings – Default",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/Commandbox/Default (Linux).sublime-keymap",
+                                    "platform": "Linux"
+                                }
+                            },
+                            {
+                                "caption": "Key Bindings – Default",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/Commandbox/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                }
+                            },
+                            // Keybindings - User
+                            {
+                                "caption": "Key Bindings – User",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (OSX).sublime-keymap",
+                                    "platform": "OSX"
+                                }
+                            },
+                            {
+                                "caption": "Key Bindings – User",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (Linux).sublime-keymap",
+                                    "platform": "Linux"
+                                }
+                            },
+                            {
+                                "caption": "Key Bindings – User",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                }
+                            },
+                            { "caption": "-" },
+                            // README
+                            {
+                                "caption": "View README in Github",
+                                "command": "open_url", "args": { "url": "https://github.com/Ortus-Solutions/sublime-commandbox" }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

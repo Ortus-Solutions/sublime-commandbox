@@ -1,0 +1,1 @@
+{"platforms": ["*"], "url": "https://github.com/Ortus-Solutions/sublime-commandbox", "dependencies": [], "sublime_text": "*", "version": "5.3.0", "description": "Run Commandbox tasks and snippets from Sublime Text"}

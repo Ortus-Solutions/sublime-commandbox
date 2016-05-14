@@ -1,0 +1,31 @@
+{
+    // Override your environment PATH
+    "exec_args": {},
+
+    // Use a new tab when showing the results. If it's false it'll use a panel.
+    "results_in_new_tab": false,
+
+    // Defines the delay used to autoclose the panel or tab that holds the box results.
+    // If false (or 0) it will remain open.
+    "results_autoclose_timeout_in_milliseconds": 0,
+
+    // If true it will open the output panel when running Commandbox(silent) only if the task failed
+    "show_silent_errors": true,
+
+    // Create the file 'sublime-commandbox.log' to report errors
+    "log_errors": true,
+
+    // Syntax file for highlighting the box results
+    // Set to false if you don't want any colors (you may need to restart Sublime)
+    "syntax": "Packages/Commandbox/syntax/CommandboxResults.tmLanguage",
+
+    // Read from stdout and stderr without blocking (both at the same time)
+    "nonblocking": true,
+
+    // Add a custom flag to a particular box command. Format: { "task_name": "flags" }
+    // For example: { "concat": "--silent" }
+    "flags": {},
+
+    // If `false` the package will run even if no `box.json` is found on the root folders currently open.
+    "check_for_boxjson": true,
+}

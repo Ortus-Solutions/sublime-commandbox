@@ -1,0 +1,7 @@
+[
+	{ "keys": ["ctrl+shift+b"], "command": "commandbox", "args": {"task_name":"arbitrary_input"} },
+	{ "keys": ["ctrl+shift+s+t"], "command": "commandbox", "args": {"task_name":"server_start"} },
+	{ "keys": ["ctrl+shift+s+p"], "command": "commandbox", "args": {"task_name":"server_stop"} },
+	{ "keys": ["alt+p"], "command": "commandbox", "args": {"task_name":"default_show_panel"} },
+	{ "keys": ["super+alt+p"], "command": "commandbox", "args": {"task_name":"default_close_panel"} }
+]
