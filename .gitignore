@@ -2,3 +2,5 @@
 *.sublime-workspace
 *.log
 .jshintrc
+package-metadata.json
+*.pyc
