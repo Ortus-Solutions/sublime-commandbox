@@ -20,7 +20,7 @@
     "syntax": "Packages/Commandbox/syntax/CommandboxResults.tmLanguage",
 
     // Read from stdout and stderr without blocking (both at the same time)
-    "nonblocking": true,
+    "nonblocking": false,
 
     // Add a custom flag to a particular box command. Format: { "task_name": "flags" }
     // For example: { "concat": "--silent" }
