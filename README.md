@@ -11,7 +11,7 @@ A plugin to run your [Commandbox](https://www.ortussolutions.com/products/comman
 ### via PackageControl
 If you have [PackageControl](http://wbond.net/sublime_packages/package_control) installed, you can use it to install the package.
 
-Just type `cmd-shift-p`/`ctrl-shift-p` to bring up the command pallete and pick `Package Control: Install Package` from the dropdown, search and select the package there and you're all set.
+Just type `cmd-shift-p`/`ctrl-shift-p` to bring up the command pallete and pick `Package Control: Install Package` from the dropdown, search and select the `CommandBox` package there and you're all set.
 
 ### Manually
 
