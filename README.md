@@ -1,6 +1,6 @@
 # Sublime Commandbox
 
-A plugin to run your [Commandbox](https://www.ortussolutions.com/products/commandbox) tasks from within Sublime plus some handy [snippets](#snippets) too.
+A plugin to run [Commandbox](https://www.ortussolutions.com/products/commandbox) Commands, including server management and scaffolding, from within Commandbox.
 
 ## Quickstart
 
