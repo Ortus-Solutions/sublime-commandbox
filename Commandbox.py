@@ -58,7 +58,7 @@ class CommandboxCommand( BaseCommand ):
             setattr( self, "configCommand", ConfigCommand( self ) )
             setattr( self, "createCommand", CreateCommand( self ) )
             setattr( self, "artifactsCommand", ArtifactsCommand( self ) )
-            setattr( self, "forgeboxCommand", Commands.ForgeboxCommand( self ) )
+            setattr( self, "forgeboxCommand", ForgeboxCommand( self ) )
             setattr( self, "testboxCommand", TestboxCommand( self ) )
             setattr( self, "forgeboxCommand", ForgeboxCommand( self ) )
             setattr( self, "installCommand", InstallCommand( self ) )
