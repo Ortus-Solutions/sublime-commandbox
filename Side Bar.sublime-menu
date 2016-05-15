@@ -57,7 +57,7 @@
                     {"caption": "-"},
                     { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_testbox"} }
                 ]
-            }
+            },
             { "caption": "-" },
             {
                 "caption":"Forgebox",
