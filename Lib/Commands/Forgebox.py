@@ -21,9 +21,9 @@ class ForgeboxCommand():
     def publish( self ):
         self.caller.executeCommand( "forgebox publish" )
 
-    def login( self, runner=None ):
-        testCmd = "testbox run"
-        if runner:
-            testCmd += " runner=" + runner
+    def login( self, password=None ):
+        loginCmd = "forgebox login"
+        if password:
+            loginCmd += " username=" + self.username + " password=" + password
 
-        self.caller.executeCommand( testCmd )
+        self.caller.executeCommand( loginCmd )
