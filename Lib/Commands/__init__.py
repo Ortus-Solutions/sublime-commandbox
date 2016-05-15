@@ -6,5 +6,6 @@ from .Server import ServerCommand
 from .Coldbox import CreateCommand
 from .Artifacts import ArtifactsCommand
 from .Testbox import TestboxCommand
+from .Install import InstallCommand
 
-__all__ = ['HelpCommand','ConfigCommand','ArbitraryCommand','ForgeboxCommand','ServerCommand','CreateCommand','ArtifactsCommand','TestboxCommand']
+__all__ = ['HelpCommand','ConfigCommand','ArbitraryCommand','ForgeboxCommand','ServerCommand','CreateCommand','ArtifactsCommand','TestboxCommand','InstallCommand']

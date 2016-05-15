@@ -35,16 +35,17 @@ class CommandboxCommand( BaseCommand ):
             self.appendToMainThreadOutput( "Commandbox Namespace " + self.activeTask[ 0 ] + " Found!" )
     
         def functionNotFound():
-            self.appendToMainThreadOutput( "Commandbox Namespace " " has no function with the name " + self.activeTask[ 2 ] + ".\n" )
+            self.appendToMainThreadOutput( "Commandbox Namespace `" + self.activeTask[ 0 ] + "` has no function with the name `" + self.activeTask[ 2 ] + "`.\n" )
 
         ns = getattr( self, self.activeTask[ 0 ] + "Command", namespaceNotFound )
         fn = getattr( ns, self.activeTask[ 2 ], functionNotFound );
         
-        cmd = fn()
-        if cmd:
-            self.executeCommand( cmd )
+        if self.activeTask[ 0 ] == "install":
+            ns.run( self.activeTask[ 2 ] )
+        elif fn:
+            fn()
         else:
-            print("No runnable command.")
+            print("No runnable command provided.")
 
     def scopeNamespaces( self ):
         try:
@@ -60,6 +61,7 @@ class CommandboxCommand( BaseCommand ):
             setattr( self, "forgeboxCommand", Commands.ForgeboxCommand( self ) )
             setattr( self, "testboxCommand", TestboxCommand( self ) )
             setattr( self, "forgeboxCommand", ForgeboxCommand( self ) )
+            setattr( self, "installCommand", InstallCommand( self ) )
 
     def start( self ):
     	self.show_output_panel()

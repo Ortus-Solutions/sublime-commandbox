@@ -15,7 +15,23 @@
                     { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_server"} }
                 ]
             },
+            {
+                "caption": "Install",
+                "children": [ 
+                    { "caption": "Enter Package To Install", "command": "commandbox", "args": {"task_name":"install_arbitrary"} },
+                    { "caption": "-" },
+                    { "caption": "ColdBox Framework", "command": "commandbox", "args": {"task_name":"install_coldbox"} },
+                    { "caption": "ContentBox ( w/Framework )", "command": "commandbox", "args": {"task_name":"install_cborm"} },
+                    { "caption": "Coldbox ORM", "command": "commandbox", "args": {"task_name":"install_cborm"} },
+                    { "caption": "Coldbox Storages", "command": "commandbox", "args": {"task_name":"install_cbstorages"} },
+                    { "caption": "Coldbox i18n", "command": "commandbox", "args": {"task_name":"install_cbi18n"} },
+                    { "caption": "Coldbox Security", "command": "commandbox", "args": {"task_name":"install_cbsecurity"} },
+                    { "caption": "ColdBox Relax", "command": "commandbox", "args": {"task_name":"install_relax"} },
+                    {"caption": "-"},
+                    { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_install"} }
 
+                ]
+            },
             {
                 "caption": "Create",
                 "children": [ 
@@ -33,7 +49,6 @@
                     { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_create"} }
                 ]
             },
-
             {
                 "caption":"TestBox",
                 "children":[ 
@@ -42,21 +57,15 @@
                     {"caption": "-"},
                     { "caption": "Help", "command": "commandbox", "args": {"task_name":"help_testbox"} }
                 ]
-            },
-            {
-                "caption":"Config",
-                "children":[ 
-                    { "caption": "Set", "command": "commandbox", "args": {"task_name":"config_inputSet"} },
-                    { "caption": "Get", "command": "commandbox", "args": {"task_name":"config_inputGet"} }
-                ]
-            },
+            }
             { "caption": "-" },
             {
                 "caption":"Forgebox",
-                "children":[ 
+                "children":[
                     { "caption": "Login", "command": "commandbox", "args": {"task_name":"forgebox_inputLogin"} },
                     { "caption": "Search Packages", "command": "commandbox", "args": {"task_name":"forgebox_inputSearch"} },
-                    { "caption": "Publish", "command": "commandbox", "args": {"task_name":"forgebox_publish"} }
+                    { "caption": "Publish", "command": "commandbox", "args": {"task_name":"forgebox_publish"} },
+                    { "caption": "Install Package", "command": "commandbox", "args": {"task_name":"install_arbitrary"} }
                 ]
             }
            
