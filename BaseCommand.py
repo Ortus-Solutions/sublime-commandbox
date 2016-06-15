@@ -230,7 +230,7 @@ class CrossPlatformProcess():
 
     def run(self, command):
         with Dir.cd(self.working_dir):
-            self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=self.path, shell=True, preexec_fn=self._preexec_val())
+            self.process = subprocess.Popen([command], stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=self.path, shell=True, preexec_fn=self._preexec_val())
 
         self.last_command = command
         ProcessCache.add(self)
