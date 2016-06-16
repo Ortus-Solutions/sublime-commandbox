@@ -56,7 +56,7 @@ class BaseCommand(sublime_plugin.WindowCommand):
         except AttributeError:
             binaryPath = self.findBinaryPath( "box" )
             if binaryPath:
-                self.settings.binary = binaryPath
+                self.settings.binary = os.path.join(binaryPath)
             else:
                 self.appendToMainThreadOutput( "A CommandBox binary could not be found to run.  Please set the binary path in your user settings or install CommandBox first." )
                 return False
@@ -66,7 +66,7 @@ class BaseCommand(sublime_plugin.WindowCommand):
 
         # if not self.isCommandboxReady():
         self.show_panel()
-        binaryCmd = '""' + self.settings.binary + '"" ' + cmd
+        binaryCmd = self.settings.binary + " " + cmd
         self.process.run( binaryCmd )
         stdout, stderr = self.process.communicate(self.appendToMainThreadOutput)
 
