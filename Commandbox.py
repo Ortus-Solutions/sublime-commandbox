@@ -38,7 +38,7 @@ class CommandboxCommand( BaseCommand ):
             self.appendToMainThreadOutput( "Commandbox Namespace `" + self.activeTask[ 0 ] + "` has no function with the name `" + self.activeTask[ 2 ] + "`.\n" )
 
         ns = getattr( self, self.activeTask[ 0 ] + "Command", namespaceNotFound )
-        fn = getattr( ns, self.activeTask[ 2 ], functionNotFound );
+        fn = getattr( ns, self.activeTask[ 2 ], functionNotFound )
         
         if self.activeTask[ 0 ] == "install":
             ns.run( self.activeTask[ 2 ] )
