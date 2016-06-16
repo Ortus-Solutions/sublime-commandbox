@@ -66,7 +66,7 @@ class BaseCommand(sublime_plugin.WindowCommand):
 
         # if not self.isCommandboxReady():
         self.show_panel()
-        binaryCmd = self.settings.binary + " " + cmd
+        binaryCmd = '""' + self.settings.binary + '"" ' + cmd
         self.process.run( binaryCmd )
         stdout, stderr = self.process.communicate(self.appendToMainThreadOutput)
 
